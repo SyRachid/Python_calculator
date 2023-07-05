@@ -1,30 +1,34 @@
-def entree():
-    print("entrez le premier nombre\n") 
-    premier=input("nombre 1: ")
-    print("entrez le deuxième nombre: ")
-    second = input("nombre 2: ")
+import function as f
 def checkEntree():
-    while (type(premier)!=number and type(second)!=number):
-        entree()
+    while True:
+        nombre1 = input("Entrez le premier nombre : ")
+        nombre2 = input("Entrez le deuxième nombre : ")
+        
+        if not(nombre1.isnumeric()) or not(nombre2.isnumeric()):
+            print("Veuillez entrer des nombres valides.")
+        else:
+            break
+    
+    return float(nombre1), float(nombre2)
+
 i = 1
 def checkOp(op,nombre1,nombre2):
     if (op == 1):
-        return addition(nombre1,nombre2)
+        return f.addition(nombre1,nombre2)
     if (op == 2):
-        return soustraction(nombre1,nombre2)
+        return f.soustraction(nombre1,nombre2)
     if (op == 3):
-        return multiplication(nombre1,nombre2)
+        return f.multiplication(nombre1,nombre2)
     if (op == 4):
-        return division(nombre1,nombre2)
+        return f.division(nombre1,nombre2)
     else :
         print("vérifier l'entrée\n")
-        operation = input("operation : ")
+        operation = float(input("operation : "))
         checkOp(operation,nombre1,nombre2)
 while (i == 1):
-    entree()
-    checkEntree()
-    print("tapez 1 pour addition\n,tapez 2 pour soustraction, tapez 3 pour multiplication\n, tapez 4 pour division")
-    operation = input("operation : \n")
+    premier,second=checkEntree()
+    print("tapez 1 pour addition\n tapez 2 pour soustraction\n tapez 3 pour multiplication\n tapez 4 pour division\n")
+    operation = float(input("operation : "))
     result = checkOp(operation,premier,second)
-    print("le resultat est "+result+"\n")
-    i = input("tapez 1 pour effectuer une autre operation et 0 pour quitter: ")
+    print(result)
+    i = float(input("tapez 1 pour effectuer une autre operation et tout autre touche pour quitter: "))
