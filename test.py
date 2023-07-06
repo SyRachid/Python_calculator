@@ -146,4 +146,11 @@ def test_division():
         print('division test case 5 passed ')
     else:
         print('division test case 5 failed')
+
 test_division()
+print("")
+test_mul()
+print("")
+test_add()
+print("")
+test_sous()
