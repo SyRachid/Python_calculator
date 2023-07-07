@@ -4,7 +4,7 @@ i = 1
 while (i == 1):
     premier,second=c.checkEntree()
     print("\n")
-    print("tapez 1 pour addition\ntapez 2 pour soustraction\ntapez 3 pour multiplication\ntapez 4 pour division\n")
+    print("tapez 1 pour addition\ntapez 2 pour soustraction\ntapez 3 pour multiplication\ntapez 4 pour division\ntapez 5 pour la puissance entière")
     operation = float(input("operation : "))
     result = c.checkOp(operation,premier,second)
     print("\n")

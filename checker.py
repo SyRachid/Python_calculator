@@ -30,6 +30,8 @@ def checkOp(op,nombre1,nombre2):
         return f.multiplication(nombre1,nombre2)
     if (op == 4):
         return f.division(nombre1,nombre2)
+    if (op == 5):
+        return f.puissance(nombre1,nombre2)
     else :
         print("vérifier l'entrée\n")
         operation = float(input("operation : "))
