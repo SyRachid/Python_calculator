@@ -90,3 +90,8 @@ def test_pow():
     input_2 = 2
     expected_outpout = 25
     assert f.puissance(input_1,input_2) == expected_outpout
+    input_1 = 1
+    input_2 = 2
+    expected_outpout = 1
+    assert f.puissance(input_1,input_2) == expected_outpout
+    
